@@ -240,62 +240,92 @@ export default function GraniteRidgeHardscapesWebsite() {
             </div>
           </div>
 
-          <form action="mailto:estimates@graniteridgehardscapes.com" method="POST" encType="text/plain" className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl">
-            <div className="grid gap-5 md:grid-cols-2">
-              <label className="block">
-                <span className="mb-2 block text-sm font-medium text-slate-300">Name</span>
-                <input
-                  className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none placeholder:text-slate-500"
-                  placeholder="Your name"
-                />
-              </label>
-              <label className="block">
-                <span className="mb-2 block text-sm font-medium text-slate-300">Phone</span>
-                <input
-                  className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none placeholder:text-slate-500"
-                  placeholder="603-732-6712"
-                />
-              </label>
-              <label className="block md:col-span-2">
-                <span className="mb-2 block text-sm font-medium text-slate-300">Email</span>
-                <input
-                  className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none placeholder:text-slate-500"
-                  placeholder="you@example.com"
-                />
-              </label>
-              <label className="block">
-                <span className="mb-2 block text-sm font-medium text-slate-300">Town</span>
-                <input
-                  className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none placeholder:text-slate-500"
-                  placeholder="Nashua"
-                />
-              </label>
-              <label className="block">
-                <span className="mb-2 block text-sm font-medium text-slate-300">Project Type</span>
-                <select className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none">
-                  <option>Patio</option>
-                  <option>Walkway</option>
-                  <option>Fire Pit Area</option>
-                  <option>Repair or Re-leveling</option>
-                  <option>Other</option>
-                </select>
-              </label>
-              <label className="block md:col-span-2">
-                <span className="mb-2 block text-sm font-medium text-slate-300">Project Details</span>
-                <textarea
-                  rows={5}
-                  className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none placeholder:text-slate-500"
-                  placeholder="Tell us what you are looking to build, upgrade, or repair."
-                />
-              </label>
-            </div>
-            <button
-              type="submit"
-              className="mt-6 w-full rounded-2xl bg-white px-6 py-4 font-semibold text-slate-950 transition hover:-translate-y-0.5"
-            >
-              Send Request
-            </button>
-          </form>
+          <form
+  action="https://formspree.io/f/mojkngyw"
+  method="POST"
+  className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl"
+>
+  <div className="grid gap-5 md:grid-cols-2">
+
+    <label className="block">
+      <span className="mb-2 block text-sm font-medium text-slate-300">Name</span>
+      <input
+        name="name"
+        type="text"
+        required
+        className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white"
+      />
+    </label>
+
+    <label className="block">
+      <span className="mb-2 block text-sm font-medium text-slate-300">Phone</span>
+      <input
+        name="phone"
+        type="tel"
+        required
+        className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white"
+      />
+    </label>
+
+    <label className="block md:col-span-2">
+      <span className="mb-2 block text-sm font-medium text-slate-300">Email</span>
+      <input
+        name="email"
+        type="email"
+        required
+        className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white"
+      />
+    </label>
+
+    <label className="block">
+      <span className="mb-2 block text-sm font-medium text-slate-300">Town</span>
+      <input
+        name="town"
+        type="text"
+        className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white"
+      />
+    </label>
+
+    <label className="block">
+      <span className="mb-2 block text-sm font-medium text-slate-300">Project Type</span>
+      <select
+        name="projectType"
+        className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white"
+      >
+        <option>Patio</option>
+        <option>Walkway</option>
+        <option>Fire Pit Area</option>
+        <option>Repair or Re-leveling</option>
+        <option>Other</option>
+      </select>
+    </label>
+
+    <label className="block md:col-span-2">
+      <span className="mb-2 block text-sm font-medium text-slate-300">Project Details</span>
+      <textarea
+        name="details"
+        rows={5}
+        required
+        className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white"
+      />
+    </label>
+
+  </div>
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="New estimate request from Granite Ridge Hardscapes website"
+  />
+
+  <button
+    type="submit"
+    className="mt-6 w-full rounded-2xl bg-white px-6 py-4 font-semibold text-slate-950"
+  >
+    Send Request
+  </button>
+
+</form>
         </div>
       </section>
 
